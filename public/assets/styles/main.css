@@ -1,0 +1,2447 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
+@font-face {
+
+  font-family: 'Maxwell Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Maxwell Bold'), url('../fonts/Maxwell SmCaps Bold/MaxwellSmCaps-Bold.woff') format('woff');
+
+}
+
+
+@font-face {
+
+  font-family: 'Maxwell Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Maxwell Bold Italic'), url('../fonts/Maxwell SmCaps Bold Italic/MaxwellSmCaps-BoldItalic.woff') format('woff');
+
+}
+
+
+/* --------------------------------------------------------------      reset.css   * Resets default browser CSS.   -------------------------------------------------------------- */
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: 'Montserrat', sans-serif;
+  vertical-align: baseline;
+
+}
+
+
+body {
+
+   line-height: 1.5;
+ 
+}
+
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table {
+
+ border-collapse: separate;
+ border-spacing: 0;
+ 
+}
+
+
+caption, th, td {
+
+ text-align: left;
+ font-weight: normal;
+ 
+}
+
+
+table, td, th { vertical-align: middle; }
+
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+
+
+blockquote, q { quotes: "" ""; }
+
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+
+html {  box-sizing: border-box; }
+
+
+*, *:before, *:after {  box-sizing: inherit; }
+
+section{ overflow: hidden; }
+
+/* outil */
+.ye-btn-blanc{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 25px;
+  text-decoration: none!important;
+  color: #000;
+  background-color: #fff;
+  width: 200px;
+  padding: 11px 0 7px 0;
+  display: block;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1;
+
+}
+
+
+.ye-btn-blanc:hover{
+
+  color: #fff;
+  background-color: #a20000;
+
+}
+
+
+.ye-btn-rouge{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 25px;
+  text-decoration: none!important;
+  color: #fff;
+  border: 2px solid #a20000;
+  background-color: #a20000;
+  width: 200px;
+  padding: 11px 0 7px 0;
+  display: block;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1;
+
+}
+
+
+.ye-btn-rouge:hover{
+
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+
+}
+
+
+.ye-btn-noir{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 25px;
+  text-decoration: none!important;
+  color: #fff;
+  border: 2px solid #000;
+  background-color: #000;
+  width: 200px;
+  padding: 11px 0 7px 0;
+  display: block;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1;
+
+}
+
+
+.ye-btn-noir:hover{
+
+  color: #000;
+  background-color: transparent;
+  border: 2px solid #000;
+
+}
+
+
+.ye-btn-call{
+
+  text-decoration: none!important;
+  border: 4px solid #fff;
+  border-radius: 15px;
+  padding: 15px 30px;
+  background-color: #1d1d1d;
+  color: #fff;
+
+}
+
+
+.ye-btn-call:hover{
+
+  background-color: transparent;
+  color: #fff;
+
+}
+
+
+/* correction pour conteneurs non standard */
+.ye-corr > .row{ margin-right: 0; }
+
+
+/* base */
+.ye-section{ margin: 100px 0; }
+
+
+/* Header */
+header{  background-color: #020000; }
+
+
+.menu-transparent{  background-color: rgb(2, 0, 0,0.7); }
+
+
+/* menu */
+.navbar{  padding: 25px 0; }
+
+
+.navbar .navbar-brand{  margin-left: 182px;}
+
+.navbar .navbar-toggler-icon img{ filter: invert(1); }
+
+.navbar .navbar-nav .nav-item.ye-active{ position: relative; }
+
+
+.navbar .navbar-nav .nav-item.ye-active::before{
+
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 25px;
+  background-image: url(../icons/fleche-rouge-l.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -13px;
+  
+}
+
+
+.navbar .navbar-nav .nav-item.ye-active .nav-link,.navbar .navbar-nav .nav-item .nav-link:hover{  color: #c5271e; }
+
+
+.navbar .navbar-nav .nav-item .nav-link{
+
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+
+.navbar .navbar-nav .nav-item{  margin-right: 25px; }
+
+
+.navbar .navbar-nav .nav-item.ye-btn-soumission{
+
+  margin-left: 35px;
+  margin-right: 150px;
+
+}
+
+
+.navbar .navbar-nav .nav-item.ye-btn-soumission a{
+
+  font-family: "Maxwell Bold";
+  font-size: 18px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  padding: 7px 40px 2px 40px;
+  display: block;
+
+}
+
+
+.navbar .navbar-nav .nav-item.ye-btn-soumission a:hover{
+
+  background-color: #a20000;
+  color: #fff;
+
+}
+
+
+/* Section top banner */
+.ye-banner-top{
+
+  padding: 5% 0 210px 0;
+  position: relative;
+
+}
+
+
+.ye-banner-top .ye-background img{
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+
+.ye-banner-top > .container{  max-width: 100%; }
+
+.ye-banner-top .ye-description-container{  margin-left: 142px; }
+
+
+.ye-banner-top h3{
+
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #c5271e;
+  margin-bottom: 27px;
+
+}
+
+
+.ye-banner-top .ye-boutons-container{
+
+  display: flex;
+  margin-top: 30px;
+  width: 115%;
+
+}
+
+
+.ye-banner-top .ye-boutons-container a:last-of-type{ margin-left: 15px; }
+
+
+.ye-banner-top-gen{
+
+  background-image: url(../images/banner-generale.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  padding: 74px 0;
+
+}
+
+
+.ye-banner-top-gen h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 167px;
+  color: #fff;
+  line-height: 130px;
+
+}
+
+
+.ye-banner-top-gen.ye-p-exterminateur h1{
+
+  font-size: 110px;
+  line-height: 100px;
+
+}
+
+
+.ye-banner-top-gen h3{
+
+  font-size: 18px;
+  font-weight: 900;
+  color: #c5271e;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+}
+
+
+/* section sous banner */
+.ye-section-sous-banner{
+
+  background-image: url(../images/exterminateur/logo-x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 142px 0;
+
+}
+
+
+.ye-section-sous-banner h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-section-sous-banner h1 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+
+}
+
+
+.ye-section-sous-banner p{
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  text-align-last: center;
+  margin-bottom: 30px;
+  padding: 0 35px;
+
+}
+
+
+.ye-section-sous-banner .ye-boutons-container{
+
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.ye-section-sous-banner .ye-boutons-container a:last-of-type{  margin-left: 15px; }
+
+
+/* section professionnels */
+.ye-professionnels{
+
+  background-image: url(../images/exterminateur/raton.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 48%;
+  padding: 195px 0;
+
+}
+
+
+.ye-professionnels h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-professionnels h1 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+
+}
+
+
+.ye-professionnels p{
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding-right: 72px;
+
+}
+
+
+/* section des produits et des outils performante */
+.ye-produit-outil{
+
+  background-color: #f7f7f7;
+  background-image: url(../images/exterminateur/blatte.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+  background-size: 32%;
+  padding: 140px 0;
+
+}
+
+
+.ye-produit-outil h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-produit-outil h1 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+
+}
+
+
+.ye-produit-outil p{
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding-right: 72px;
+
+}
+
+
+/* page exterminateur section services */
+.ye-p-exterminateur-services{
+
+  background-color: #f7f7f7;
+  padding-bottom: 50px;
+
+}
+
+
+.ye-p-exterminateur-services > .container{  max-width: 1500px; }
+
+
+.ye-p-exterminateur-services h3{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 24px;
+  color: #565656;
+  padding: 0 58px;
+  text-align: center;
+
+}
+
+
+.ye-p-exterminateur-services .ye-service-container:not(:last-of-type)::after{
+
+  content: "";
+  width: 40px;
+  height: 65px;
+  background-image: url(../icons/fleche-rouge-m.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+
+/* section plusieur service */
+.ye-plusieur-service:not(.ye-produit-certifie){
+
+  background-image: url(../images/boutique/green-way.jpg);
+  background-repeat: no-repeat;
+  background-position: 80% center;
+  background-size: 28%;
+  padding: 150px 0 100px 0;
+
+}
+
+
+.ye-plusieur-service .ye-description-container{  margin-left: -50px; }
+
+
+.ye-plusieur-service h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-plusieur-service h1 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+
+}
+
+
+.ye-plusieur-service p{
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding-right: 72px;
+
+}
+
+
+/* section produit certifie  */
+.ye-produit-certifie{
+
+  background-image: url(../images/boutique/Ah.jpg);
+  background-repeat: no-repeat;
+  background-position: 35% center;
+  background-size: 21%;
+  padding: 150px 0 100px 0;
+
+}
+
+
+.ye-produit-certifie >.container{  max-width: 1335px; }
+
+
+/* section services d'identification */
+.ye-services-identification{
+
+  background-color: #f7f7f7;
+  background-image: url(../images/boutique/onguard.png), url(../images/boutique/logo-x.png);
+  background-repeat: no-repeat;
+  background-position: 32% center, center;
+  background-size: 17%, cover;
+  padding: 185px 0;
+
+}
+
+
+.ye-services-identification > .container{  max-width: 1525px; }
+
+
+.ye-services-identification h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-services-identification h1:first-of-type{  margin-bottom: 0; }
+
+
+.ye-services-identification h1 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+
+}
+
+
+.ye-services-identification p{
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding-right: 72px;
+
+}
+
+
+/* page services sous banner */
+.ye-p-services-sous-banner{
+
+  background-image: url(../images/services/mille-pattes.png), url(../images/services/fond.png);
+  background-repeat: no-repeat;
+  background-position: left bottom, center;
+  background-size: 60%, cover;
+
+}
+
+
+.ye-p-services-sous-banner .ye-top-section{
+
+  background-image: url(../images/services/souris.png);
+  background-repeat: no-repeat;
+  background-position: 87% center;
+  background-size: 38%;
+
+}
+
+
+.ye-p-services-sous-banner .ye-top-container{  padding: 160px 0 140px 0; }
+
+
+.ye-p-services-sous-banner .ye-bottom-container{  padding: 160px 0; }
+
+
+.ye-p-services-sous-banner h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-p-services-sous-banner h1:first-of-type{  margin-bottom: 0; }
+
+
+.ye-p-services-sous-banner h1 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+
+}
+
+
+.ye-p-services-sous-banner p{
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding-right: 72px;
+
+}
+
+
+/* trois sections */
+.ye-trois-sections{
+
+  background-image: url(../images/services/blatte.png), url(../images/services/fond-1.png);
+  background-repeat: no-repeat;
+  background-position: left 39%, center;
+  background-size: 53%, cover;
+
+}
+
+
+.ye-trois-sections .ye-haut{
+
+  background-image: url(../images/services/marmotte.png);
+  background-repeat: no-repeat;
+  background-position: 80% center;
+  background-size: 22%;
+  padding: 240px 0;
+
+}
+
+
+.ye-trois-sections .ye-millieu{  padding: 240px 0; }
+
+
+.ye-trois-sections .ye-bas{
+
+  background-image: url(../images/services/souris-p.png);
+  background-repeat: no-repeat;
+  background-position: 77% center;
+  background-size: 31%;
+  padding: 240px 0;
+
+}
+
+
+.ye-trois-sections h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-trois-sections h1:first-of-type{  margin-bottom: 0; }
+
+
+.ye-trois-sections h1 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+
+}
+
+
+.ye-trois-sections p{
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding-right: 72px;
+
+}
+
+
+/* section gestion parasitaires */
+.ye-gestion-parasitaire{
+
+  background-image: url(../images/accueil/sourie1.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 51%;
+  padding: 137px 0;
+  margin-bottom: 200px;
+
+}
+
+
+.ye-gestion-parasitaire h2{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 46px;
+  text-transform: uppercase;
+  color: #131313;
+  
+}
+
+
+.ye-gestion-parasitaire h2:last-of-type{  margin-bottom: 10px; }
+
+
+.ye-gestion-parasitaire h2 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+  
+}
+
+
+.ye-gestion-parasitaire p{
+
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+
+}
+
+
+/* section services */
+.ye-services > .container{  max-width: 1500px; }
+
+
+.ye-services picture{
+
+  display: block;
+  margin-bottom: 30px;
+  
+}
+
+
+.ye-services h3{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 24px;
+  color: #565656;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-services p{
+
+  font-size: 16px;
+  line-height: 30px;
+  height: 120px;
+  overflow: hidden;
+  text-align: center;
+  color: #b3b3b3;
+  margin-bottom: 20px;
+
+}
+
+
+.ye-services a{  margin: 0 auto; }
+
+
+/* section nous-joindre */
+.ye-contactez-nous{
+
+  background-image: url(../images/accueil/blatte.png),url(../images/accueil/contactez-nous-fond.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 12%, cover;
+  padding: 27px 0;
+  margin-bottom: 0;
+  margin-top: 200px;
+
+}
+
+
+.ye-contactez-nous.ye-p-services{  margin-top: 0; }
+
+
+.ye-contactez-nous.ye-p-exterminateur{
+
+  background-image: url(../images/exterminateur/fourmis.png),url(../images/accueil/contactez-nous-fond.png);
+  background-size: 12%, cover;
+  background-position: 80px center, left center;
+
+}
+
+
+.ye-contactez-nous h2{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 50px;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+
+.ye-contactez-nous h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 90px;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+
+.ye-contactez-nous p{
+
+  font-size: 16px;
+  color: #fff;
+
+}
+
+
+/* grande section */
+.ye-section-grande{
+
+  /* background-image: url(../images/accueil/animation-avenir.png),url(../images/accueil/background-logo.jpg);
+ */
+  background-image: url(../images/accueil/background-logo.jpg);
+  background-repeat: no-repeat;
+  /* background-position: center bottom, top right;
+ */
+  background-position: top right;
+  padding: 40px 0;
+
+}
+
+
+.ye-section-grande h2{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 46px;
+  text-transform: uppercase;
+  color: #131313;
+  
+}
+
+
+.ye-section-grande h2:last-of-type{  margin-bottom: 10px; }
+
+
+.ye-section-grande h2 span{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #565656;
+  
+}
+
+
+.ye-section-grande p{
+
+  font-size: 16px;
+  color: #8e8e8e;
+  text-align: justify;
+  margin-bottom: 20px;
+
+}
+
+.ye-section-grande p a{
+    
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 20px;
+  color: #8e8e8e;
+  
+}
+
+
+.ye-section-residentielle{
+
+  background-image: url(../images/accueil/sourie2.png);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center right;
+  padding: 180px 0;
+
+}
+
+
+.ye-section-service-gestion{
+
+  background-image: url(../images/accueil/fourmis.png);
+  background-repeat: no-repeat;
+  background-size: 37%;
+  background-position-y: center;
+  background-position-x: 65px;
+  padding: 180px 0;
+
+}
+
+
+.animation-wrapper{
+
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+.animation-wrapper #cheese-trap{float: right; }
+
+
+.animation-wrapper #mouse-trap{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease 1s;
+
+}
+
+
+/*Desktop*/
+.animation-wrapper #mouse-trap.step-desktop-1{ left: 150px; }
+.animation-wrapper #mouse-trap.step-desktop-2{ left: 300px; }
+.animation-wrapper #mouse-trap.step-desktop-3{ left: 450px; }
+.animation-wrapper #mouse-trap.step-desktop-4{ left: 630px; }
+.animation-wrapper #mouse-trap.step-desktop-5{ left: 955px; }
+
+
+/*Ipad*/
+.animation-wrapper #mouse-trap.step-ipad-1{ left: 150px; }
+.animation-wrapper #mouse-trap.step-ipad-2{ left: 535px; }
+.animation-wrapper #mouse-trap.step-ipad-3{ left: 775px; }
+.animation-wrapper #mouse-trap.step-ipad-sm-1{ left: 150px; }
+.animation-wrapper #mouse-trap.step-ipad-sm-2{ left: 355px; }
+
+
+/*Mobile*/
+.animation-wrapper #mouse-trap.step-mobile-m-1{ left: 130px; }
+.animation-wrapper #mouse-trap.step-mobile-m-2{ left: 200px; }
+
+
+@media screen and (max-width: 480px){
+
+  .animation-wrapper{ margin-top: 30px; }
+  .animation-wrapper #cheese-trap{ height: 40px; }
+  .animation-wrapper #mouse-trap{ height: 40px; }
+}
+
+
+.animation-wrapper #mouse-trap.step-mobile-1{ left: 30%; }
+.animation-wrapper #mouse-trap.step-mobile-2{ left: 78%; }
+
+@media screen and (max-width: 400px){
+
+  .animation-wrapper #mouse-trap.step-mobile-1{ left: 30%; }
+  .animation-wrapper #mouse-trap.step-mobile-2{ left: 73%; }
+}
+
+
+@media screen and (max-width: 380px){
+
+  .animation-wrapper #mouse-trap.step-mobile-2{ left: 70%; }
+
+}
+
+
+@media screen and (max-width: 350px){
+
+  .animation-wrapper #mouse-trap.step-mobile-2{ left: 67%; }
+
+}
+
+
+@media screen and (max-width: 320px){
+
+  .animation-wrapper #mouse-trap.step-mobile-2{ left: 65%; }
+
+}
+
+
+/* section visitez boutique */
+.ye-visitez-boutique{
+
+  background-image: url(../images/accueil/visitez-boutique-fond.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  padding: 27px 0;
+  margin-bottom: 0;
+
+}
+
+
+.ye-visitez-boutique h2{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 47px;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+
+.ye-visitez-boutique h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 88px;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+
+.ye-visitez-boutique p{
+
+  font-size: 16px;
+  color: #fff;
+
+}
+
+
+/* section obtenir une soumission */
+.ye-obtenir-soumission{
+
+  overflow: hidden;
+  border-right: 1px solid #fff;
+
+}
+
+
+.ye-obtenir-soumission.ye-p-a-propos{
+
+  background-image: url(../images/a-propos/ecureuil.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 39%;
+
+}
+
+
+.ye-obtenir-soumission > .container{ max-width: 1700px; }
+
+
+.ye-obtenir-soumission .ye-formulaire{
+
+  padding-top: 100px;
+  padding-bottom: 15px;
+
+}
+
+
+.ye-obtenir-soumission video{ display: block; }
+.ye-obtenir-soumission .ye-label-container{ position: relative; }
+
+
+.ye-obtenir-soumission .ye-label-container picture{
+
+  position: absolute;
+  top: 14px;
+  right: 8%;
+  transition: right 0.5s ease-in;
+
+}
+
+
+.ye-obtenir-soumission .ye-label-container:hover picture{
+
+  right: 3%;
+  transition: right 0.5s ease-out;
+
+}
+
+
+.ye-obtenir-soumission .ye-label-container h1{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 103px;
+  color: #000;
+  text-transform: uppercase;
+  margin-left: 20px;
+
+}
+
+
+.ye-obtenir-soumission .ye-label-container h2{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 70px;
+  color: #000;
+  text-transform: uppercase;
+  margin-left: 20px;
+
+}
+
+
+.ye-obtenir-soumission .ye-contacts{
+
+  position: relative;
+  left: 85px;
+  z-index: 1;
+
+}
+
+
+.ye-obtenir-soumission .ye-contacts h3{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 22px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+}
+
+
+.ye-obtenir-soumission .ye-contacts a{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 22px;
+  color: #626262;
+
+}
+
+
+.ye-obtenir-soumission .ye-contacts > div{
+
+  position: relative;
+  margin-bottom: 15px;
+
+}
+
+
+.ye-obtenir-soumission .ye-contacts img{
+
+  position: absolute;
+  left: -55px;
+  top: 5px;
+  
+}
+
+
+/* section associations */
+.ye-association{
+
+  background-color: #000;
+  padding: 50px 0;
+
+}
+
+.ye-association .ye-images-container{
+    display: flex;
+    text-align: center;
+}
+
+.ye-association picture img{ max-width: 100%; }
+
+.ye-association picture img:first-of-type{ margin-right: 100px; }
+
+
+/* footer */
+footer{
+
+  position: relative;
+  background-color: #1b1b1b;
+  padding: 100px 0 0 0;
+
+}
+
+
+footer::before{
+
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #323232;
+  top: 50px;
+
+}
+
+
+footer > .container{ max-width: 1370px; }
+
+
+footer .ye-footer-top .ye-slogan p{
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: justify;
+  color: #b3b3b3;
+
+}
+
+
+footer .ye-footer-top .ye-navigation a{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 16px;
+  color: #c7c8ca;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+}
+
+
+footer .ye-footer-top .ye-contacts h3{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+}
+
+
+footer .ye-footer-top .ye-contacts a{
+
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+
+}
+
+
+footer .ye-footer-top .ye-contacts > div{
+
+  position: relative;
+  margin-bottom: 15px;
+
+}
+
+
+footer .ye-footer-top .ye-contacts img{
+
+  filter: invert(1);
+  max-height: 30px;
+  position: absolute;
+  left: -55px;
+  top: 5px;
+  
+}
+
+
+footer .ye-footer-bottom{ padding: 20px 0; }
+
+
+footer .ye-footer-bottom h3{
+
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 14px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+
+}
+
+
+footer .ye-footer-bottom a{
+
+  font-family: "Maxwell Bold", sans-serif;
+  color: #fff;
+  margin: 0 5px;
+
+}
+
+
+footer .ye-en-haut{
+
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #292928;
+  right: 40px;
+  bottom: 35px;
+
+}
+
+
+footer .ye-en-haut::after{
+
+  content: "↑";
+  color: #fff;
+  font-family: "Maxwell Bold", sans-serif;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.5s ease-in;
+  
+}
+
+
+footer .ye-en-haut:hover::after{
+
+  top: 40%;
+  transition: top 0.5s ease-out;
+    
+}
+
+
+.ye-merci{
+
+  background-image: url(../images/accueil/background-logo-droite.png), url(../images/accueil/background-logo-gauche.png);
+  background-repeat: no-repeat;
+  background-position: right center, left center;
+  padding: 150px 0;
+
+}
+
+
+@media screen and (max-width: 3000px) {
+
+  /* Section top banner */
+  .ye-banner-top{
+
+    padding: 7% 0 210px 0;
+    position: relative;
+  
+  }
+
+}
+
+
+@media screen and (max-width: 1550px) {
+
+  /* Section top banner */
+  .ye-banner-top{
+
+    padding: 5% 0 210px 0;
+    position: relative;
+  
+  }
+
+
+  /* menu */  
+  .navbar .navbar-brand { margin-left: 70px; }      
+
+  /* section obtenir soumission */  
+  .ye-obtenir-soumission .ye-label-container picture { right: 0; }  
+  .ye-obtenir-soumission .ye-label-container:hover picture { right: -4%; }
+
+  /* section professionnels */
+  .ye-professionnels {
+    background-size: 40%;
+  }
+
+  /* section identification */
+  .ye-services-identification {
+    background-size: 23%, cover;
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 1470px) {
+
+  /* menu */
+  .navbar .navbar-nav .nav-item { margin-right: 15px; }
+  .navbar .navbar-nav .nav-item .nav-link { font-size: 13px; }
+
+  .navbar .navbar-nav .nav-item.ye-btn-soumission {
+
+    margin-left: 0px;
+    margin-right: 73px;
+  
+  }
+
+
+  .navbar .navbar-nav .nav-item.ye-btn-soumission a {
+
+    font-size: 16px;
+    padding: 7px 15px 2px 15px;
+  
+  }
+
+
+    .ye-obtenir-soumission .ye-label-container picture { right: -8%; }
+    .ye-obtenir-soumission .ye-label-container:hover picture { right: -10%; }
+
+}
+
+
+@media screen and (max-width: 1350px) {
+
+  .ye-obtenir-soumission .ye-label-container picture { right: -24%; }    
+  .ye-obtenir-soumission .ye-label-container:hover picture { right: -27%; }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  /* menu */
+  .navbar .navbar-brand { margin-left: 25px; }  
+  .navbar .navbar-brand img{ max-width: 85%; }  
+  .navbar .navbar-nav .nav-item { margin-right: 5px; }
+
+
+  .navbar .navbar-nav .nav-item.ye-btn-soumission {
+
+    margin-left: 5px;
+    margin-right: 32px;
+  
+  }
+
+
+  .navbar .navbar-nav .nav-item.ye-btn-soumission a {
+
+    font-size: 14px;
+    padding: 7px 15px 2px 15px;
+  
+  }
+
+
+  .navbar .navbar-nav .nav-item .nav-link { font-size: 13px; }
+
+
+  /* banner top */
+  .ye-banner-top { padding: 7% 0 158px 0; }  
+  .ye-banner-top .ye-description-container { margin-left: 15px; }
+
+
+  .navbar .navbar-nav .nav-item.ye-active::before {
+
+    width: 12px;
+    height: 21px;
+    left: -8px;
+  
+  }
+
+
+  /* banner general */
+  .ye-banner-top-gen { background-position: 85% center; }
+
+
+  .ye-banner-top-gen h1 {
+
+    font-family: "Maxwell Bold", sans-serif;
+    font-size: 102px;
+    line-height: 79px;
+  
+  }
+
+
+  .ye-banner-top-gen.ye-p-exterminateur h1 {
+
+    font-size: 88px;
+    line-height: 75px;
+  
+  }
+
+
+  /* section sous banner */
+  .ye-section-sous-banner h1 { font-size: 39px; }
+
+
+  /* section professionnels */
+  .ye-professionnels{
+
+    background-size: 52%;
+    background-position: right 25%;
+    padding: 130px 0;
+  
+  }
+
+
+  .ye-professionnels h1 { font-size: 31px; }  
+  .ye-professionnels p { font-size: 15px; }
+
+
+  /* section des produits et des outils performante */
+  .ye-produit-outil{
+
+    background-color: #f7f7f7;
+    background-image: url(../images/exterminateur/blatte.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    background-size: 32%;
+    padding: 140px 0;
+  
+  }
+
+
+  .ye-produit-outil .ye-produit-outil-container{
+
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  
+  }
+
+
+  .ye-produit-outil h1 { font-size: 34px; }  
+  .ye-produit-outil p { font-size: 15px; }
+
+
+  /* page exterminateur section services */
+  .ye-p-exterminateur-services h3 {
+
+    font-size: 20px;
+    padding: 0 22px;
+  
+  }
+
+
+  .ye-contactez-nous.ye-p-exterminateur { background-position: 70% center, left center; }
+
+
+  /* section plusieur service */
+  .ye-plusieur-service:not(.ye-produit-certifie) {
+
+    background-position: 89% center;
+    background-size: 37%;
+    padding: 100px 0 50px 0;
+  
+  }
+
+
+  .ye-produit-certifie {
+
+    background-position: 23% center;
+    background-size: 37%;
+    padding: 100px 0 50px 0;
+  
+  }
+
+
+  .ye-plusieur-service h1 { font-size: 34px; }  
+  .ye-plusieur-service p { font-size: 15px; }
+
+
+  /* section services d'identification */
+  .ye-services-identification{
+
+    background-position: 25% 32%, center;
+    padding: 100px 0;
+  
+  }
+
+
+  .ye-services-identification h1 { font-size: 29px; }  
+  .ye-services-identification p { font-size: 15px; }
+
+
+  /* page services sous banner */
+  .ye-p-services-sous-banner .ye-top-section {
+
+    background-position: 100% center;
+    background-size: 46%;
+  
+  }
+
+
+  .ye-p-services-sous-banner .ye-top-container { padding: 70px 0; }  
+  .ye-p-services-sous-banner .ye-bottom-container { padding: 70px 0; }  
+  .ye-p-services-sous-banner h1 { font-size: 38px; }  
+  .ye-p-services-sous-banner p { font-size: 15px; }  
+  
+  /* trois sections */  
+  .ye-trois-sections h1 { font-size: 36px; }  
+  .ye-trois-sections p { font-size: 15px; }
+
+
+  .ye-trois-sections .ye-haut {
+
+    background-position: 90% center;
+    background-size: 30%;
+    padding: 150px 0;
+  
+  }
+
+
+  .ye-trois-sections .ye-bas {
+
+    background-position: 87% center;
+    background-size: 39%;
+    padding: 150px 0;
+  
+  }
+
+
+  /* section gestion parasitaires */
+  .ye-gestion-parasitaire{
+
+    background-size: 52%;
+    padding: 30px 0;
+    margin-bottom: 150px;
+  
+  }
+
+
+  .ye-gestion-parasitaire h2 { font-size: 35px; }  
+  .ye-gestion-parasitaire p { font-size: 15px; }
+
+
+  /* section services */
+  .ye-services .px-5{
+
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+  
+  }
+
+
+  .ye-services picture { margin-bottom: 20px; }
+
+
+  .ye-services h3 {
+
+    font-size: 20px;
+    margin-bottom: 14px;
+  
+  } 
+
+
+  .ye-services p { font-size: 14px; }
+
+
+  .ye-btn-rouge, .ye-btn-blanc, .ye-btn-noir {
+
+    font-size: 20px;
+    width: 180px;
+  
+  }
+
+
+  /* section contactez-nous */
+  .ye-contactez-nous.ye-p-services {
+
+    background-image: url(../images/services/blatte-r.png),url(../images/accueil/contactez-nous-fond.png);
+    background-position: 98% bottom, left center;
+    background-size: 12%, cover;
+  
+  }
+
+
+  .ye-contactez-nous h2 { font-size: 40px; }  
+  .ye-contactez-nous h1 { font-size: 70px; }  
+  .ye-contactez-nous p { font-size: 14px; }
+
+
+  /* section grande */
+  .ye-section-grande {
+
+    /* background-image: url(../images/accueil/animation-avenir.png),url(../images/accueil/background-logo-gris.jpg);
+ */
+    background-image: url(../images/accueil/background-logo-gris.jpg);
+    padding: 0;
+  
+  }
+
+
+  .ye-section-grande h2 { font-size: 35px; }
+
+
+  .ye-section-grande p {
+
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  
+  }
+
+
+  .ye-section-residentielle { padding: 130px 0; }  
+  .ye-section-service-gestion { padding: 130px 0; }
+
+
+  /* section visitez boutique */
+  .ye-visitez-boutique{ background-position-x: 69%, right; }
+  .ye-visitez-boutique h2 { font-size: 32px; }
+  .ye-visitez-boutique h1 { font-size: 60px; }
+  .ye-visitez-boutique p { font-size: 14px; }
+
+
+  /* section obtenir une soumission */
+  .ye-obtenir-soumission > .container > .row{ align-items: initial!important; }
+  .ye-obtenir-soumission .ye-label-container h2 { font-size: 45px; }
+  .ye-obtenir-soumission .ye-label-container h1 { font-size: 62px; }
+
+  .ye-obtenir-soumission .ye-label-container picture {
+
+    top: -5px;
+    right: -10%;
+    
+  }
+
+
+  .ye-obtenir-soumission .ye-label-container picture img { max-width: 85%; }
+
+  .ye-obtenir-soumission .ye-label-container:hover picture {
+
+    top: -5px;
+    right: -15%;
+
+  }
+
+
+  .ye-obtenir-soumission:not(.ye-p-a-propos) .ye-contacts{ display: none; }
+
+  .ye-obtenir-soumission .ye-video{
+
+    position: relative;
+    left: -65px;
+    z-index: -1;
+    
+  }
+
+
+  .ye-obtenir-soumission.ye-p-a-propos .ye-contacts{
+
+    padding-top: 250px;
+    -ms-flex: 0 0 29%;
+    flex: 0 0 29%;
+    max-width: 29%;
+
+  }
+
+
+  .ye-obtenir-soumission.ye-p-a-propos { background-position: right 78%; }
+  .ye-obtenir-soumission .ye-contacts h3 { font-size: 20px; }  
+  .ye-obtenir-soumission .ye-contacts a { font-size: 20px; }
+  
+  .ye-association picture img:first-of-type {
+      
+    margin-right: 40px;
+      
+  }
+
+
+  /* footer */
+  footer .ye-footer-top .ye-slogan,footer .ye-footer-top .ye-contacts{
+
+    -ms-flex: 0 0 31%;
+    flex: 0 0 31%;
+    max-width: 31%;
+
+  }
+
+
+  footer .ye-en-haut { bottom: 14px; }
+
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+  /* menu */
+  .navbar .navbar-nav .nav-item {
+
+    margin-right: 0;
+    margin-left: 30px;
+  
+} 
+
+
+  .navbar .navbar-nav .nav-item.ye-active::before { left: -22px; }
+
+
+  .navbar .navbar-nav .nav-item.ye-btn-soumission {
+
+    margin-left: 10px;
+    width: 200px;
+    margin-right: 0;
+  
+  }
+
+
+  /* banner top */
+  .ye-banner-top { padding: 3% 0 45px 0; }
+
+
+  .ye-banner-top .ye-description-container {
+
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+     max-width: 58.333333%;
+  
+  }
+
+
+  /* banner general */
+  .ye-banner-top-gen { background-position: 73% center; }
+
+
+  /* section sous banner */
+  .ye-section-sous-banner .ye-section-sous-banner-container{
+
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  
+  } 
+
+
+  .ye-section-sous-banner { padding: 120px 0; }  
+  .ye-section-sous-banner h1 { font-size: 34px; }
+
+
+  /* section professionnels */
+  .ye-professionnels{
+
+    background-position: right 30%;
+    padding: 100px 0;
+  
+  }
+
+
+  .ye-professionnels h1 { font-size: 20px; }
+  .ye-professionnels p { font-size: 14px; }
+
+
+  /* section des produits et des outils performante */
+  .ye-produit-outil{ padding: 80px 0; }    
+  .ye-produit-outil h1 { font-size: 20px; }    
+  .ye-produit-outil p { font-size: 14px; }
+
+
+  /* page exterminateur section services */
+  .ye-p-exterminateur-services h3 {
+
+    font-size: 16px;
+    padding: 0 7px;
+  
+  }
+
+
+  .ye-p-exterminateur-services .ye-service-container:not(:last-of-type)::after {
+
+    width: 28px;
+    height: 43px;
+    right: -13px;
+      
+  }
+
+
+  .ye-contactez-nous.ye-p-exterminateur { background-position: 73% center, left center; }
+
+
+  /* section plusieur service */
+  .ye-plusieur-service:not(.ye-produit-certifie) { background-size: 43%; } 
+
+  .ye-produit-certifie {
+
+    background-position: 14% center;
+    background-size: 44%;
+  
+  }
+
+
+  .ye-plusieur-service h1 { font-size: 26px; }  
+  .ye-plusieur-service p { font-size: 14px; }  
+  
+  /* section identification */  
+  .ye-services-identification{ background-position: 23% 32%, center; }  
+  .ye-services-identification h1 { font-size: 22px; }
+
+
+  .ye-services-identification p {
+
+    font-size: 14px;
+    padding-right: 0;
+  
+  }
+
+
+  /* page services sous banner */
+  .ye-p-services-sous-banner {
+
+    background-position: -455% 50%, center;
+    background-size: 95%, cover;
+  
+  }
+
+
+  .ye-p-services-sous-banner .ye-top-section {
+
+    background-position: 100% center;
+    background-size: 46%;
+  
+  }
+
+
+  .ye-p-services-sous-banner h1 { font-size: 26px; }  
+  .ye-p-services-sous-banner p { font-size: 14px; }
+
+
+  /* trois sections */
+  .ye-trois-sections {
+
+    background-position: left 45%, center;
+    background-size: 68%, cover;
+  
+  }
+
+
+  .ye-trois-sections h1 { font-size: 26px; }  
+  .ye-trois-sections p { font-size: 14px; }
+
+
+  .ye-trois-sections .ye-haut {
+
+    background-position: 90% center;
+    background-size: 30%;
+    padding: 150px 0;
+  
+  }
+
+
+  .ye-trois-sections .ye-bas {
+
+    background-position: 87% center;
+    background-size: 39%;
+    padding: 150px 0;
+  
+  }
+
+
+  /* section gestion parasitaires */
+  .ye-gestion-parasitaire h2 { font-size: 24px; }  
+  .ye-gestion-parasitaire p { font-size: 14px; }  
+  
+
+  /* section services */  
+  .ye-services h3 { font-size: 16px; }  
+  .ye-btn-rouge, .ye-btn-blanc { width: 160px; }  
+  
+  
+  /* section contactez-nous */  
+  .ye-contactez-nous h2 { font-size: 32px; }    
+  .ye-contactez-nous h1 { font-size: 55px; }
+
+
+  .ye-contactez-nous .ye-section-call{
+
+    -ms-flex: 0 0 24%;
+    flex: 0 0 24%;
+    max-width: 24%;
+  
+  }
+
+
+  /* section grande */
+  .ye-section-service-gestion { background-size: 34%; }  
+  .ye-section-grande h2 { font-size: 26px; }
+
+
+  /* section visitez boutique */
+  .ye-visitez-boutique h2 { font-size: 25px; }      
+  .ye-visitez-boutique h1 { font-size: 45px; }   
+  .ye-visitez-boutique p { font-size: 12px; }  
+  .ye-visitez-boutique .ye-section-call{ padding-left: 0!important; }
+
+
+  .ye-btn-call {
+
+    padding: 15px 20px;
+    font-size: 13px;
+  
+  }
+
+
+  /* section obtenir une soumission */
+  .ye-obtenir-soumission video {
+
+    display: block;
+    height: 51%;
+  
+  }
+
+
+  .ye-obtenir-soumission .ye-label-container h2 { font-size: 27px; }  
+  .ye-obtenir-soumission .ye-label-container h1 { font-size: 34px; }  
+  .ye-obtenir-soumission .ye-label-container picture img { max-width: 49%; }
+
+
+  /* section .associations */
+  .ye-association .ye-images-container{
+
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+  /* banner top */
+  .ye-banner-top .ye-description-container {
+
+    -ms-flex: 0 0 67%;
+    flex: 0 0 67%;
+    max-width: 67%;
+    margin-left: 8px;
+  
+  }
+
+
+  .ye-banner-top h3 {
+
+    font-size: 16px;
+    margin-bottom: 28px;
+  
+  }
+
+
+  /* banner generale */
+  .ye-banner-top-gen { background-position: 67% center; }
+
+
+  .ye-banner-top-gen h1 {
+
+    font-size: 68px;
+    line-height: 60px;
+  
+  }
+
+
+  .ye-banner-top-gen.ye-p-exterminateur h1 {
+
+    font-size: 42px;
+    line-height: 42px;
+  
+  }
+
+
+  .ye-banner-top-gen h3 { font-size: 14px; }  
+  
+  
+  /* section sous banner */  
+  .ye-section-sous-banner { padding: 120px 0 50px 0; }
+
+
+  .ye-section-sous-banner .ye-section-sous-banner-container {
+
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  
+  }
+
+
+  .ye-section-sous-banner h1 { font-size: 26px; }
+
+
+  .ye-section-sous-banner p {
+
+    font-size: 15px;
+    padding: 0 15px;
+  
+  }
+
+
+  /* section des produits et des outils performants */
+  .ye-produit-outil { background-position: 85% 78%; }
+
+
+  .ye-produit-outil .ye-produit-outil-container {
+
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  
+  }
+
+
+  .ye-produit-outil p { padding-right: 0; }  
+  
+  
+  /* page exterminateur section services */  
+  .ye-p-exterminateur-services .ye-service-container{ margin-bottom: 40px; }
+
+
+  .ye-p-exterminateur-services .ye-service-container:not(:last-of-type)::after {
+
+    width: 28px;
+    height: 43px;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -3px) rotate(90deg);
+  
+  }
+
+
+  /* section professionnels */
+  .ye-professionnels {
+
+    background-position: 45% 0%;
+    padding: 185px 0 0 0;
+  
+  }
+
+
+  .ye-professionnels p { padding-right: 0; }
+
+
+  /* section plusieurs services */
+  .ye-plusieur-service:not(.ye-produit-certifie) {
+
+    background-position: center top;
+    padding: 185px 0 0 0;
+  
+  }
+
+
+  .ye-produit-certifie {
+
+    background-position: center top;
+    padding: 200px 0 50px 0;
+  
+  }
+
+
+  .ye-plusieur-service p { padding-right: 0; }
+
+
+  /* section identification */
+  .ye-services-identification {
+
+    background-position: 90% 12%, center;
+    padding: 200px 0 0 0;
+  
+  }
+
+
+  /* page services sous banner */
+  .ye-p-services-sous-banner {
+
+    background-position: 132% 115%, center;
+    background-size: 80%, cover;
+  
+  }
+
+
+  .ye-p-services-sous-banner .ye-top-section { background-position: 100% 95%; }  
+  .ye-p-services-sous-banner p { padding-right: 0; }  
+  .ye-p-services-sous-banner .ye-top-container { padding: 52px 15px; }  
+  .ye-p-services-sous-banner .ye-bottom-container { padding: 52px 15px; }
+
+
+  /* trois sections */
+  .ye-trois-sections {
+
+    background-position: 120% 67%, center;
+    background-size: 68%, cover;
+  
+  }
+
+
+  .ye-trois-sections p { padding-right: 0; }
+
+
+  .ye-trois-sections .ye-haut {
+
+    background-position: 90% bottom;
+    background-size: 30%;
+    padding: 100px 0;
+  
+  }
+
+
+  .ye-trois-sections .ye-bas {
+
+    background-position: 87% bottom;
+    background-size: 39%;
+    padding: 100px 0;
+  
+  }
+
+
+  /* section gestion parasitaire */
+  .ye-gestion-parasitaire {
+
+    background-image: url(../images/accueil/sourie1-gris.jpg);
+    background-size: 100%;
+    background-position-y: 100%;
+    padding-bottom: 175px;
+    margin-bottom: 0;
+  
+  }
+
+
+  .ye-gestion-parasitaire p { margin-top: 10px; }  
+  
+  
+  /* section services */  
+  .ye-services .px-5 { margin-bottom: 100px; }  
+  .ye-services .px-5:last-of-type { margin-bottom: 0; }
+
+
+  /* section contactez-nous */
+  .ye-contactez-nous{
+
+    margin-top: 0;
+    background-image: url(../images/accueil/blatte-r.png),url(../images/accueil/contactez-nous-fond.png);
+    background-position: 90% bottom, left center;
+    background-size: 32%, cover;
+    padding: 35px 0 50px 0;
+  
+  }
+
+
+  .ye-contactez-nous.ye-p-services {
+
+    background-position: 79% 99%, left center;
+    background-size: 29%, cover;
+  
+  }
+
+
+  .ye-contactez-nous.ye-p-exterminateur {
+
+    background-position: 86% 88%, left center;
+    background-size: 37%, cover;
+  
+  }
+
+
+  .ye-contactez-nous h2 { font-size: 27px; }  
+  .ye-contactez-nous h1 { font-size: 38px; }  
+  .ye-contactez-nous p { letter-spacing: 1px; }
+
+
+  .ye-contactez-nous .ye-section-call {
+
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 32px;
+  
+  }
+
+
+  /* section grande */
+  .ye-section-grande { padding: 40px 0 140px 0; }
+
+
+  .ye-section-residentielle {
+
+    padding: 90px 0;
+    background-position-y: 100%;
+    background-size: 48%;
+  
+  }
+
+
+  .ye-section-service-gestion{
+
+    padding: 100px 0;
+    background-position-y: 100%;
+    background-position-x: right;
+    background-size: 48%;
+  
+  }
+
+
+  /* section visitez boutique */
+  .ye-visitez-boutique{
+
+    margin-top: 0;
+    background-image: url(../images/accueil/fourmis-er.png), url(../images/accueil/visitez-boutique-fond.png);
+    background-position: right bottom, right center;
+    background-size: 37%, cover;
+    padding: 35px 0 50px 0;
+
+  }
+
+
+  .ye-visitez-boutique h2 { font-size: 20px; }  
+  .ye-visitez-boutique h1 { font-size: 30px; }  
+  .ye-visitez-boutique p { letter-spacing: 1px; }
+
+
+  .ye-visitez-boutique .ye-section-call {
+
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 32px;
+
+  }
+
+
+  .ye-btn-call { margin-left: 15px; }  
+  
+  
+  /* section obtenir une sousmission */  
+  .ye-obtenir-soumission .ye-video { display: none; }  
+  .ye-obtenir-soumission.ye-p-a-propos .ye-contacts { display: none; }  
+  .ye-obtenir-soumission.ye-p-a-propos { background-position: 100% 92%; }
+
+
+  /* section associations */
+  .ye-association picture {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+
+  .ye-association picture img:first-of-type {
+
+    margin-right: 0;
+    margin-bottom: 60px;
+
+  }
+
+
+  /* footer */
+  footer .ye-footer-top .ye-slogan,footer .ye-footer-top .ye-navigation,footer .ye-footer-top .ye-contacts{
+
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+
+  }
+
+
+  footer .ye-footer-bottom h3 {
+
+    font-size: 11px;
+    text-align: center;
+
+  }
+
+
+  footer .ye-en-haut{
+
+    right: 19px;
+    bottom: 56px;
+
+  }
+
+
+
+}
