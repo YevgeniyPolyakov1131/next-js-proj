@@ -24,7 +24,7 @@ export default function Home() {
             <div class="container ye-corr">
                 <div class="row">
                     <div class="col-sm-5 ye-description-container">
-                        <h3>Experts en gestion parasitaire TEST</h3>                        
+                        <h3>Experts en gestion parasitaire</h3>                        
                         <picture>
                             <img  class="img-fluid" src="/assets/images/accueil/expert.png" alt="exp"/>
                         </picture>
